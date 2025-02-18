@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style_login.css">
+    <script src="./assets/scripts/script.js"></script>
+    <title>Editar perfil</title>
+</head>
+<body>
+    <form id="formulario">
+        <h3>Mudar dados</h3>
+        <p>coloque os seus dados da forma que você deseja alterar</p>
+        <input type="text" placeholder="username" id="username">
+        <input type="password" placeholder="senha" id="senha_criar">
+        <input type="text" placeholder="email" id="email">
+        <input type="url" placeholder="link da foto de perfil" id="foto_perfil2"> 
+            <div class="preco-medio">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>R$</option>
+                    <option value="1">$</option>
+                    <option value="2">€</option>
+                  </select>
+                <input type="number" placeholder="0,00" id="preco-médio-usuario">
+            </div>
+            <select name="gostos" id="gostos">
+                <option value="1">Gosto 1</option>
+                <option value="2">Gosto 2</option>
+                <option value="3">Gosto 3</option>
+                <option value="4">Gosto 4</option>
+                <option value="5">Gosto 5</option>
+                <option value="6">Gosto 6</option>
+                <option value="7">Gosto 7</option>
+                <option value="8">Gosto 8</option>
+                <option value="9">Gosto 9</option>
+                <option value="10">Gosto 10</option>
+                <option value="11">Gosto 11</option>
+                <option value="12">Gosto 12</option>
+            </select>
+        <input type="submit" onclick="editarperfilcad(ED_gostos)">
+    </form>
+
+    <script>var ED_gostos = [];
+        new MultiSelectTag('gostos', {
+            rounded: true,    // default true
+            shadow: true,      // default false
+            placeholder: 'Search',  // default Search...
+            tagColor: {
+                textColor: '#327b2c',
+                borderColor: '#92e681',
+                bgColor: '#eaffe6',
+            },
+            onChange: function(values) {
+                for(var GV_iest = 0; GV_iest <= ED_gostos.length; GV_iest = GV_iest + 1){ED_gostos.pop()}
+                if(ED_gostos.length > 0){
+                    for(var GV_iest = 0; GV_iest <= ED_gostos.length; GV_iest = GV_iest + 1){ED_gostos.pop()}
+                }
+                console.log(ED_gostos);
+                values.map((estilo) => {
+                    ED_gostos.push(estilo.value) ;
+        
+                })
+                console.log(ED_gostos);
+            }
+        })
+        //window.onload = codigo(ED_gostos)
+    </script>
+</body>
+</html>

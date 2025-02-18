@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Time Seeker</title>
+    <!--<link rel="shortcut icon" href="" type="image/x-icon">-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--https://source.unsplash.com/random/150x150?sig=0-->
+    <header>
+        
+        <div class="container-logo">
+            <a href="index.html"><img id="logo" src="./assets/img/Logo_ShowTimeSeeker_Preta_Sem_Fundo.png" alt="logo"></a>
+        </div>
+        
+        <div class="GV_barrafiltro">
+          <div class="GV_caixabarradepesquisa">
+            <input type="text" name="" id="GV_barradepesquisa" class="GV_barradepesquisa" placeholder="Pesquisar">
+          </div>
+          <div class="filtro">
+              <button title="Filtro" class="filter" id="GV_botaodofiltro">
+                  <svg viewBox="0 0 512 512" height="1em">
+                    <path
+                      d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"
+                    ></path>
+                  </svg>
+                </button>
+          </div>
+        </div>
+
+        <div class="entrarcriar">
+            <a href="./cadastrar.html"><button id="botao"> Criar
+            </button></a>
+            <a href="./entrar.html">
+              <button id="botao" class="GV_entrar">
+                  Entrar
+              </button>
+            </a>
+        </div>
+    </header>
+    <div id="GV_Menufiltro" class="GV_Menufiltro">
+      <form id="GV_filtroformulario" class="GV_filtroformulario">
+        <div class="GV_separacaodropdown">
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle GV_botoesdropdownfiltros" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Música
+            </button>
+            <ul class="dropdown-menu GV_dropdown-menu">
+              <li><input type="checkbox" name="1" id="1" class="GV_filtrosgostos"><label for="1">Gosto 1</label></li>
+              <li><input type="checkbox" name="2" id="2" class="GV_filtrosgostos"><label for="2">Gosto 2</label></li>
+              <li><input type="checkbox" name="3" id="3" class="GV_filtrosgostos"><label for="3">Gosto 3</label></li>
+              <li><input type="checkbox" name="4" id="4" class="GV_filtrosgostos"><label for="4">Gosto 4</label></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle GV_botoesdropdownfiltros" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Ambiente
+            </button>
+            <ul class="dropdown-menu GV_dropdown-menu">
+              <li><input type="checkbox" name="5" id="5" class="GV_filtrosgostos"><label for="5">Gosto 5</label></li>
+              <li><input type="checkbox" name="6" id="6" class="GV_filtrosgostos"><label for="6">Gosto 6</label></li>
+              <li><input type="checkbox" name="7" id="7" class="GV_filtrosgostos"><label for="7">Gosto 7</label></li>
+              <li><input type="checkbox" name="8" id="8" class="GV_filtrosgostos"><label for="8">Gosto 8</label></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle GV_botoesdropdownfiltros" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Comida e bebida
+            </button>
+            <ul class="dropdown-menu GV_dropdown-menu">
+              <li><input type="checkbox" name="9" id="9" class="GV_filtrosgostos"><label for="9">Gosto 9</label></li>
+              <li><input type="checkbox" name="10" id="10" class="GV_filtrosgostos"><label for="10">Gosto 10</label></li>
+              <li><input type="checkbox" name="11" id="11" class="GV_filtrosgostos"><label for="11">Gosto 11</label></li>
+              <li><input type="checkbox" name="12" id="12" class="GV_filtrosgostos"><label for="12">Gosto 12</label></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle GV_botoesdropdownfiltros" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Data
+            </button>
+            <ul class="dropdown-menu GV_dropdown-menu GV_dropdown-menugastos">
+              <li>
+                <input type="date" name="Data" id="GV_data" class="GV_data" placeholder="Data">
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle GV_botoesdropdownfiltros" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Gasto medio
+            </button>
+            <ul class="dropdown-menu GV_dropdown-menu GV_dropdown-menugastos">
+              <li>
+                <input type="number" name="preco" id="GV_preco" min="0.00" step="0.01" class="GV_precomedio" placeholder="Gasto médio">
+                <select 10lass="form-select precomedio" aria-label="Default select example" form="GV_filtroformulario" name="GV_moeda" id="GV_moedafiltro">
+                  <option value="R$" selected>R$</option>
+                  <option value="$">$</option>
+                  <option value="€">€</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="submit" id="GV_ativarfiltro" class="GV_ativarfiltro">
+          Filtrar
+        </button>
+      </form>
+    </div>
+    <aside class="GV_asidemenulateral">
+        <input type="checkbox" name="menuativado" id="menuativado">
+        <label for="menuativado" class="iconesmenu">
+          <span class="material-symbols-outlined">
+            arrow_right
+          </span>
+          <span class="material-symbols-outlined">
+            arrow_left
+          </span>
+        </label>
+        <div class="opcoesmenu">
+          <ul>
+              <li>
+                <a href="#"> 
+                <div>
+                  <span class="material-symbols-outlined">
+                  home
+                  </span><!--Página principal-->
+                </div>
+                </a>
+              </li>
+              <li>
+                <a href="./cadastrar.html" class="GV_linkperfil">
+                  <div>
+                    <span class="material-symbols-outlined">
+                      person
+                    </span>
+                  </div>
+                  <!--Perfil--></a>
+              </li>
+          </ul>
+        </div>
+    </aside>
+    
+    <main>
+
+      <!--<div class="landing-page">
+
+        <div class="logo-2">
+          <img src="./assets/img/Logo_SHowTimeSeeker_Azul_Sem_Fundo.png" alt="logo">
+        </div>
+
+      
+        <div class="texto">
+           <h1>Encontre eventos com a sua cara <br> com Show Time Seeker</h1>
+        </div>
+        <div class="textos">
+          <div class="texto2">
+            <p>Com o Show Time Seeker se tornou mais fácil, simples e rápido achar e divulgar eventos.Encontre seu ambiente de entretenimento perfeito em poucos cliques.</p>
+          </div>
+        </div>
+
+      </div>-->
+
+    <div id="card-pos">
+      <div class="card text-bg-dark" id="card-container">
+        <img src="https://source.unsplash.com/random/1000x400?sig=0" id="card-imagem" class="card-img" alt="foto">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text GV_card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="cards-menores-container">
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center" id="GV_cardsmenorescontainer">
+        <div class="col" id="card-menor">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/random/1070x400?sig=0" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" id="card-menor">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/random/1060x400?sig=0" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+          <div class="col" id="card-menor">
+            <div class="card h-100">
+              <img src="https://source.unsplash.com/random/1040x400?sig=0" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+        <div class="col" id="card-menor">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/random/1000x410?sig=0" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" id="card-menor">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/random/1870x410?sig=0" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" id="card-menor">
+          <div class="card h-100">
+            <img src="https://source.unsplash.com/random/1080x410?sig=0" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="espacoembranco">
+      &nbsp;
+    </div>
+    </main>
+    <button class="GV_vernotificacao">
+      <span class="material-symbols-outlined">
+        notifications
+      </span>
+    </button>
+    <div class="GV_caixadacaixadanotificacao hidden" id="GV_caixadacaixadanotificacao">
+      <button>X</button>
+      <div id="GV_caixanotificacao" class="GV_caixanotificacao">
+        <div id="notification" class="">Sem notificações</div>
+      </div>
+    </div>
+
+    <script src="./assets/scripts/GV_filtroeexibicaoscript.js"></script>
+    <script>
+      window.onload = GV_codigo();
+    </script>
+
+</body>
+</html>

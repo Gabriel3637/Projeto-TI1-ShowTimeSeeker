@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Show Time Seeker - STS
+authors:
+  - family-names: Dayrell
+    given-names: Enzo
+  - family-names: Valedo
+    given-names: Gabriel
+  - family-names: Bastos
+    given-names: Heitor
+  - family-names: Ferreira
+    given-names: Luis 
+  - family-names: Neiva
+    given-names: Mateus 
+  - family-names: Biluca
+    given-names:Julio
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Nepomuceno
+    given-names: Hayala
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Marques
+    given-names: Carlos 
+keywords:
+  - Eventos
+  - Entretenimento 
+repository-code: https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-t-20241-showtimeseeker 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-06-28
+=======
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Show Time Seeker
+authors:
+  - family-names: Dayrell
+    given-names: Enzo
+  - family-names: Valedo
+    given-names: Gabriel
+  - family-names: Bastos
+    given-names: Heitor
+  - family-names: Ferreira
+    given-names: Luis
+  - family-names: Neiva
+    given-names: Mateus
+  - family-names: Biluca
+    given-names:Julio
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Nepomuceno
+    given-names: Hayala
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Marques
+    given-names: Carlos
+keywords:
+  - Eventos
+  - Entretenimento
+repository-code: https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-pmg-cc-t-20241-showtimeseeker
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-06-28
+>>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605

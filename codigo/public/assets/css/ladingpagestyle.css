@@ -1,0 +1,82 @@
+@charset "UTF-8";
+:root{
+    --cor1: #0554F2;
+    --cor2: #076DF2;
+    --cor3: #3889F2;
+    --cor4: #F2F2F2;
+    --cor5: #0D0D0D;
+    --cor6: #fff;
+    --cor7: #000;
+    --cor8: #05025F;
+    --cor9: #f23838;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background: url(../img/Landing_Page.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+  /*landing-page*/
+div.logo-2 {
+    display: flex;
+    justify-content: center;
+}
+div.logo-2 img{
+    width: 200px;
+    border-radius: 100%;
+}
+div.logo-2 img.sombradalogo{
+    width: 200px;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(1px, 1px);
+    z-index: -7;
+}
+div.texto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor4);
+}
+div.texto2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #7B7777;
+    width: calc(100% - 10px);
+    max-width: 600px;
+    font-size: 1.5em;
+    margin: auto;
+}
+div.texto2 p{
+    text-align:justify;
+}
+div.textos a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor6);
+    width: 30%;
+    margin: auto;
+    height: 50px;
+    border-radius: 10px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.textos{
+    width: 100%;
+    text-align: center;
+}
+div.landing-page{
+    height: 100vh;
+    /*background: url(../img/fundo-landing-page.png);*/
+}

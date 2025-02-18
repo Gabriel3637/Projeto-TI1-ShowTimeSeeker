@@ -1,0 +1,917 @@
+@charset "UTF-8";
+:root{
+    --cor1: #0554F2;
+    --cor2: #076DF2;
+    --cor3: #3889F2;
+    --cor4: #F2F2F2;
+    --cor5: #0D0D0D;
+    --cor6: #fff;
+    --cor7: #000;
+    --cor8: #05025F;
+    --cor9: #f23838;
+}
+
+html{
+    overflow-y: auto;
+}
+
+/*Cabecalho - Inicio*/
+
+header{
+    background-color: var(--cor8);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 50;
+}
+header img#GV_logo{
+    width: 50px;
+}
+
+/*Menu Lateral - Inicio*/
+
+aside{
+    position: fixed;
+    bottom: 0px;
+    z-index: 200;
+    background-color: var(--cor8);
+    width: 100%;
+  }
+  label.iconesmenu, input#menuativado{
+    display: none;
+  }
+  div.opcoesmenu ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    height: 2em;
+  }
+  
+  div.opcoesmenu ul li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  div.opcoesmenu ul li a{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--cor4);
+    width: 100%;
+    height: 100%;
+  }
+  
+  div.opcoesmenu ul li a span.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 50,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  div.opcoesmenu ul li a:hover{
+    background-color: var(--cor1);
+  }
+  
+  div.espacoembranco{
+    height: 2.5em;
+  }
+  
+  /*Menu Lateral - Fim*/
+
+/*Cabecalho - Fim*/
+
+/*Conteudo - Inicio*/
+main{
+    position: relative;
+    top: 50px;
+}
+div.GV_banner{
+    background-color: black;
+    max-height: 200px;
+    height: 30vw;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div.ED_botoes{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+}
+
+div.ED_botoes > button{
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor3);
+    transition: transform, box-shadow, 0.3s;
+    color: white;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+div.ED_botoes > button.ED_sair_perfil{
+    background-color: var(--cor9);
+}
+
+div.GV_fotodeperfil > img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 5px;
+}
+div.GV_nomedescricaodoperfil{
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px black;
+    width: calc(100% - 120px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    overflow: hidden;
+}
+div.GV_nomedescricaodoperfil > p{
+    text-align: right;
+    margin-right: 10px;
+}
+div.GV_nomedescricaodoperfil > h3{
+    margin: 5px 5px 15px 0px;
+}
+div.GV_abameusfavoritos{
+    background-color: rgb(196, 196, 196);
+    border-top: 2px solid black;
+}
+
+div.GV_imgfav > img{
+    padding: 10px;
+    width: 100%;
+}
+
+div.GV_favdescriacao{
+    overflow-y: scroll;
+    max-height: 50%;
+    word-break: break-word;
+}
+
+div.GV_exibicaodadosdoseventosfav{
+    margin-top: 20px ;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.GV_botaoerguido{    
+    background-color: white !important;
+    transform: translate(-2px, 2px) !important;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+div.GV_abameuseventos{
+    background-color: rgb(196, 196, 196);
+}
+
+div.GV_Menuabasmeuseventos{
+    background-color: gray;
+}
+
+.GV_abas{
+    border: 2px solid black;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(219, 219, 219);
+    border-bottom: none;
+    width: 50%;
+}
+
+div.GV_abas.GV_meuseventosabamenor{
+    text-decoration: underline;
+    background-color: white;
+    transform: translate(-2px, 2px);
+
+}
+div.GV_visualizarmodificareventos{
+    background-color: rgb(211, 211, 211);
+}
+
+div.GV_Cabecalhodevisualizarmodificareventos{
+    border-top: 2px solid black;
+    border-bottom: 2px solid var(--cor8);
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.GV_Cabecalhodevisualizarmodificareventos > button{
+    width: 100px;
+    min-height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor3);
+    transition: transform, box-shadow, 0.3s;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+div.GV_Cabecalhodevisualizarmodificareventos > button:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+    transition: transform, box-shadow, 0.3s;
+}
+
+div.GV_exibicaodadosdoseventos{
+    margin-top: 20px ;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+div.GV_dadosfavvisu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div.GV_dadosfavvisu > div {
+    text-align: center;
+}
+
+/*div.GV_verfavoritos{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.GV_vervisualizacoes{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+div.GV_botoesdealteracao{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px 10px 0px;
+}
+
+div.GV_botoesdealteracao > button{
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor3);
+    transition: transform, box-shadow, 0.3s;
+    color: white;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+div.GV_botoesdealteracao > button:nth-child(2){
+    background-color: var(--cor9);
+}
+
+div.GV_botoesdealteracao > button:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+    transition: transform, box-shadow, 0.3s;
+}
+
+div.GV_grafico{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.chart{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+    height: 200px;
+    margin: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bar {
+    width: 40px;
+    background-color: #3498db;
+    transition: height 0.5s ease;
+    z-index: 1;
+}
+.bar:hover {
+    background-color: #2980b9;
+}
+
+.bar:nth-child(odd) {
+    background-color: #9b59b6;
+}
+
+.bar:nth-child(odd):hover {
+    background-color: #8e44ad;
+}
+
+.bar::before {
+    content: attr(data-label);
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.bar::after {
+    content: attr(data-value);
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+div.GV_titulodecadaevento{
+    grid-row: 1;
+    grid-column: 1/3;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    
+}
+
+/*Conteudo - Fim*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Criar evento - Inicio*/
+
+/*div.drawer.rounded{
+    display: block !important;
+}*/
+
+h1#GV_titulo{
+    background-color: var(--cor8);
+    text-align: center;
+    color: var(--cor6);
+}
+div.GV_containerdoform{
+    width: 70vw;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    display: none; /*none*/
+}
+div.GV_containerdoform > form.criarevento{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.GV_containerdoform div.primeiraparte{
+    display: none; /*block*/
+}
+div.GV_containerdoform div.segundaparte{
+    display: none; /*none*/
+}
+div.GV_containerdoform div.terceiraparte{
+    display: block; /*none*/
+}
+div.GV_fundoescuro{
+    background-color: rgba(0, 0, 0, 0.438);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    display: none; /*block*/
+}
+
+div.GV_containerdoform label{
+    font-size: small;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+div.GV_containerdoform .nomedoevento{
+    width: 95%;
+    display: block;
+}
+
+div.GV_containerdoform label.nomedoevento{
+    margin: auto;
+}
+
+div.GV_containerdoform input.nomedoevento{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 0px auto 5px auto;
+}
+
+div.GV_containerdoform .localdoevento{
+    width: 95%;
+    display: block;
+}
+
+div.GV_containerdoform label.localdoevento{
+    margin: auto;
+}
+
+div.GV_containerdoform input.localdoevento{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px auto 5px auto;
+}
+
+div.GV_containerdoform .GV_tipomoeda{
+    float: right;
+    margin-top: 15px;
+}
+
+div.GV_containerdoform .precomedio{
+    display: block;
+    float: right;
+    margin: 10px 10px 0px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+div.GV_containerdoform label.data{
+    display: block;
+    margin: 10px; 
+}
+
+div.GV_containerdoform input.data{
+    display: block;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.GV_containerdoform button#avancar1{
+    margin-bottom: 10px;
+    
+}
+
+div.GV_containerdoform button#avancar2{
+    margin-bottom: 10px;
+    display: none;
+}
+
+div.GV_containerdoform button#botaocriarevento{
+    margin-bottom: 10px;
+    display: none;
+}
+
+div.GV_containerdoform div.trocadepagina{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.GV_containerdoform div.trocadepagina > button{
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor3);
+    transition: transform, box-shadow, 0.3s;
+    color: white;
+    font-weight: bold;
+}
+
+div.GV_containerdoform div.trocadepagina > button:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+    transition: transform, box-shadow, 0.3s;
+}
+
+div.GV_containerdoform div#aviso{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.37);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+div.GV_containerdoform label.descricao{
+    width: 95%;
+    margin: auto;
+    display: block;
+}
+
+div.GV_containerdoform textarea.descricao{
+    display: block; 
+    margin: auto;
+    width: 95%; 
+    resize: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 150px;
+}
+
+div.GV_containerdoform .GV_linkcontato
+{
+    width: 95%;
+    display: block;
+}
+
+div.GV_containerdoform label.GV_linkcontato
+{
+    margin: auto;
+}
+
+div.GV_containerdoform input.GV_linkcontato
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+}
+
+div.GV_containerdoform #GV_retroceder2, #GV_retroceder1{
+    display: none;
+    margin-bottom: 10px;
+}
+
+div.GV_containerdoform #GV_cancelar{
+    margin-bottom: 10px;
+    background-color: var(--cor9);
+}
+
+div.GV_containerdoform select.form-select{
+    width: 70px;
+    height: 1.5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    display: inline;
+}
+div.GV_containerdoform div.mostrarfotos{
+    background-color: rgba(128, 128, 128, 0.541);
+    width: 100% - 20px;
+    min-height: 100px;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    max-height: 40vh;
+    overflow-y: scroll;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.GV_containerdoform label.fotos{
+    display: block;
+    margin: auto;
+    width: 95%;
+}
+
+div.GV_containerdoform div.mostrarfotos img{
+    width: 100px;
+    
+}
+
+div.GV_containerdoform div.mostrarfotos > div{
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+}
+
+div.GV_containerdoform div.mostrarfotos > div > button{
+    position: absolute;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.568);
+    border: none;
+    width: 1.5em;
+    height: 1.5em;
+    box-shadow: 2px 2px 2px black;
+}
+div.GV_containerdoform div.mostrarfotos > div > button:hover{
+    background-color: var(--cor9);
+    color: white;
+}
+div.GV_containerdoform div.mostrarfotos > div > button{}
+
+div.GV_containerdoform input.fotos{
+    width: calc(100% - 20px);
+    margin: 10px;
+    margin-top: 0px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+div.GV_containerdoform button#adicionarimagemevento{
+    margin: 5px;
+    border-radius: 5px;
+}
+
+div.GV_containerdoform button#excluirimagemevento{
+    border-radius: 5px;
+}
+div.GV_botoesfotos{
+    background-color: gray;
+    width: calc(100% - 20px);
+    margin: 0px 10px 0px 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Multi select inicio*/
+
+.mult-select-tag {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-color: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    --border-color: rgb(218, 221, 224);
+    font-family: Verdana, sans-serif;
+    grid-column: 1;
+}
+
+.mult-select-tag .wrapper {
+    width: 100%
+}
+
+.mult-select-tag .body {
+    display: flex;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    min-height: 2.15rem;
+    width: 100%;
+    min-width: 14rem
+}
+
+.mult-select-tag .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    padding: .1rem;
+    align-items: center
+}
+
+.mult-select-tag .input-body {
+    display: flex;
+    width: 100%
+}
+
+.mult-select-tag .input {
+    flex: 1;
+    background: 0 0;
+    border-radius: .25rem;
+    padding: .45rem;
+    margin: 10px;
+    color: #2d3748;
+    outline: 0;
+    border: 1px solid var(--border-color)
+}
+
+.mult-select-tag .btn-container {
+    color: #e2ebf0;
+    padding: .5rem;
+    display: flex;
+    border-left: 1px solid var(--border-color)
+}
+
+.mult-select-tag button {
+    cursor: pointer;
+    width: 100%;
+    color: #718096;
+    outline: 0;
+    height: 100%;
+    border: none;
+    padding: 0;
+    background: 0 0;
+    background-image: none;
+    -webkit-appearance: none;
+    text-transform: none;
+    margin: 0
+}
+
+.mult-select-tag button:first-child {
+    width: 1rem;
+    height: 90%
+}
+
+.mult-select-tag .drawer {
+    position: absolute;
+    background: #fff;
+    max-height: 15rem;
+    z-index: 40;
+    top: 98%;
+    width: 100%;
+    overflow-y: scroll;
+    border: 1px solid var(--border-color);
+    border-radius: .25rem
+}
+
+.mult-select-tag ul {
+    list-style-type: none;
+    padding: .5rem;
+    margin: 0
+}
+
+.mult-select-tag ul li {
+    padding: .5rem;
+    border-radius: .25rem;
+    cursor: pointer
+}
+
+.mult-select-tag ul li:hover {
+    background: rgb(243 244 246)
+}
+
+.mult-select-tag .item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem .4rem;
+    margin: .2rem;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 9999px
+}
+
+.mult-select-tag .item-label {
+    max-width: 100%;
+    line-height: 1;
+    font-size: .75rem;
+    font-weight: 400;
+    flex: 0 1 auto
+}
+
+.mult-select-tag .item-close-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row-reverse
+}
+
+.mult-select-tag .item-close-svg {
+    width: 1rem;
+    margin-left: .5rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 9999px;
+    display: block
+}
+
+.hidden {
+    display: none
+}
+
+.mult-select-tag .shadow {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.mult-select-tag .rounded {
+    border-radius: .375rem
+}
+
+/*Multi select fim*/
+
+/*Criar evento - Fim*/
+
+@media screen and (min-width: 430px) {
+    header{
+      
+    }
+    main{
+      position: absolute;
+      left: 50px;
+      width: calc(100% - 50px);
+  
+    }
+  
+    /*Menu Lateral - Inicio*/
+  
+    aside{
+      position: fixed;
+      bottom: auto;
+      top: 50px;
+      left: 0px;
+      right: auto;
+      z-index: 200;
+      background-color: var(--cor8);
+      min-width: 50px;
+      width: 12em;
+      height: 100%;
+      transform: translate(calc(-12em + 50px), 0px);
+      transition: all 0.5s;
+    }
+    aside li:nth-child(1)>a::before{
+      content: "Página Principal";
+    }
+    aside li:nth-child(2)>a::before{
+      content: "Perfil";
+    }
+    aside:hover{
+      transform: translate(0px, 0px);
+      transition: all 0.5s;
+    }
+    div.opcoesmenu ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+    }
+  
+    div.opcoesmenu ul li{
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+    }
+  
+    div.opcoesmenu ul li a{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: right;
+      text-decoration: none;
+      color: var(--cor4);
+      width: 100%;
+      height: 100%;
+    }
+    div.opcoesmenu ul li a span.material-symbols-outlined {
+      
+      font-variation-settings:
+      'FILL' 50,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    div.opcoesmenu ul li a div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 100%;
+    }
+  
+    div.opcoesmenu ul li a:hover{
+      background-color: var(--cor1);
+    }
+  
+    div.espacoembranco{
+      display: none;
+    }
+  
+    /*Menu Lateral - Fim*/
+  
+    button.GV_vernotificacao{
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      width: 5em;
+      height: 5em;
+      background-color: transparent;
+      border: none;
+    }
+}

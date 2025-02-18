@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - Show Time Seeker</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Estilos adicionais podem ser adicionados aqui */
+        .evento-info {
+            margin-bottom: 20px;
+        }
+
+        .evento-descricao {
+            margin-bottom: 20px;
+        }
+
+        .comentarios {
+            margin-top: 20px;
+        }
+
+        /* Estilos para tornar o botão de contato responsivo */
+        #botao_de_contato {
+            display: block;
+            width: 100%;
+            max-width: 200px; /* Define a largura máxima para o botão */
+            margin: 0 auto; /* Centraliza o botão */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <a href="index.html"><img id="logo" src="./assets/img/Logo_ShowTimeSeeker_Preta_Sem_Fundo.png" alt="logo"></a>
+        </div>
+    </header>
+    <aside class="GV_asidemenulateral">
+        <input type="checkbox" name="menuativado" id="menuativado">
+        <label for="menuativado" class="iconesmenu">
+          <span class="material-symbols-outlined">
+            arrow_right
+          </span>
+          <span class="material-symbols-outlined">
+            arrow_left
+          </span>
+        </label>
+        <div class="opcoesmenu">
+          <ul>
+              <li>
+                <a href="./index.html"> 
+                <div>
+                  <span class="material-symbols-outlined">
+                  home
+                  </span><!--Página principal-->
+                </div>
+                </a>
+              </li>
+              <li>
+                <a href="./Perfil.html" class="GV_linkperfil">
+                  <div>
+                    <span class="material-symbols-outlined">
+                      person
+                    </span>
+                  </div>
+                  <!--Perfil--></a>
+              </li>
+          </ul>
+        </div>
+    </aside>
+    <main>
+        <div class="container">
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <div id="carouselInner" class="carousel-inner">
+                    <!-- Aqui as imagens serão inseridas dinamicamente pelo JavaScript -->
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+
+            <a id="botao_de_contato" href="">
+                <button class="btn btn-primary">Entrar em contato</button>
+            </a>
+
+            <div class="evento-info">
+                <h2 id="nomeEvento">Nome do Evento</h2>
+                <p><strong>Local:</strong> <span id="localEvento">Local do Evento</span></p>
+                <p><strong>Data:</strong> <span id="dataEvento">Data do Evento</span> <strong>Hora:</strong> <span id="horaEvento"></span></p>
+                <p><strong>Favoritados:</strong> <span id="favoritados">0</span></p>
+                <button id="botaoFavoritar" class="btn btn-primary">Favoritar</button>
+            </div>
+
+            <div class="evento-descricao">
+                <h3>Descrição</h3>
+                <p id="descricaoEvento">Descrição do evento...</p>
+            </div>
+
+            <div class="evento-visualizacoes">
+                <p><strong>Visualizações Totais:</strong> <span id="visualizacoesTotais">0</span></p>
+            </div>
+
+            <div class="comentarios">
+                <h3>Comentários</h3>
+                <textarea id="areaComentarios" class="form-control" rows="3" placeholder="Deixe seu comentário"></textarea>
+                <button id="botaoComentar" class="btn btn-primary mt-2">Comentar</button>
+            </div>
+            <div id="comentados">
+                <!-- Local onde as divs de comentários ficarão -->
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS para funcionalidades de carrossel -->
+    <script src="./assets/scripts/script.js"></script>
+    <!-- Seu script personalizado -->
+    <script>
+        const urlparams = new URLSearchParams(window.location.search);
+        const GV_idurl = parseInt(urlparams.get('id'));
+        window.onload = paginadoevento();
+    </script>
+</body>
+
+</html>
